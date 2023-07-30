@@ -93,7 +93,7 @@ The project's data is stored in a MySQL database created using the scripts in th
 * Trains: At database setup, a set amount of trains are generated with random dates/times, random seat availability, and random route parent IDs.
 * Tickets: Initially an empty table, this will be filled with user tickets as the app is used.
 
-Spring Boot, using Java 17, is the web framework I used to create the fullstack application; Maven was the dependency manager and the full list of dependencies can be found in the POM file. The key piece of code to look at is the pathfinding algorithm found in the 
+Spring Boot, using Java 17, is the web framework I used to create the fullstack application; Maven was the dependency manager and the full list of dependencies can be found in the POM file. The key piece of code to look at is the pathfinding algorithm found in the Pathfinder class in the helper directory. It's an implementation of Dijkstra's algorithm using geographic coordinates as the weighted path cost.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,14 +103,7 @@ Spring Boot, using Java 17, is the web framework I used to create the fullstack 
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![Springboot][Springboot.js]][Springboot-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -266,4 +259,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[JQuery-url]: https://jquery.com
+[Springboot.com]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
+[Springboot-url]: https://spring.io/projects/spring-boot
