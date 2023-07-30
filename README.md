@@ -85,16 +85,14 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+  Starting this project, I had three interests I wanted to explore: Java + the Spring Boot environment, creating a commercial, customer-focused product, and my personal interest in advocating for alternative transportation in the U.S. to automotive reliance. The endpoint of those ideas is this project: a high speed rail ticketing platform. Users will be able to select a date as well as an origin and destination city from the station network and the site will provide a route of stations along the shortest geographic path and train times to select from. From there, users can pick their selection of trains and will be provided tickets with UIDs.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+  The project's data is stored in a MySQL database created using the scripts in the sql-scripts folder at the root of the project. The schema is created with the below tables:
+    * Stations: I manually created these from real world, pre-existing transit hubs. The most important attribute is the latitude and longitude coordinates which will be relevant to the pathfinding algo.
+    * Routes: For each pathway between stations, there's an inbound and outbound route.
+    * Trains: At database setup, a set amount of trains are generated with random dates/times, random seat availability, and random route parent IDs.
+    * Tickets: Initially an empty table, this will be filled with user tickets as the app is used.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
