@@ -104,6 +104,9 @@ Spring Boot, using Java 17, is the web framework I used to create the fullstack 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![Springboot][Springboot.com]][Springboot-url]
+* [![SpringSecurity][SpringSecurity.com]][SpringSecurity-url]
+* [![AWS][AWS.com]][AWS-url]
+* [![MYSQL][MYSQL.com]][MYSQL-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -262,3 +265,9 @@ Use this space to list resources you find helpful and would like to give credit 
 [JQuery-url]: https://jquery.com
 [Springboot.com]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
 [Springboot-url]: https://spring.io/projects/spring-boot
+[SpringSecurity.com]: https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white
+[SpringSecurity-url]: https://spring.io/projects/spring-security
+[MYSQL.com]: https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white
+[MYSQL-url]: https://www.mysql.com
+[AWS.com]: https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white
+[AWS-url]: https://aws.amazon.com
