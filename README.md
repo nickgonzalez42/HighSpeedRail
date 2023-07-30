@@ -69,7 +69,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -95,13 +94,13 @@ The project's data is stored in a MySQL database created using the scripts in th
 
 Spring Boot, using Java 17, is the web framework I used to create the fullstack application; Maven was the dependency manager and the full list of dependencies can be found in the POM file. The key piece of code to look at is the pathfinding algorithm found in the Pathfinder class in the helper directory. It's an implementation of Dijkstra's algorithm using geographic coordinates as the weighted path cost.
 
+The project is currently deployed using AWS Elastic Beanstalk and RDS.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![Springboot][Springboot.com]][Springboot-url]
 * [![SpringSecurity][SpringSecurity.com]][SpringSecurity-url]
@@ -120,57 +119,28 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You will need Java installed with version 17 or newer as well as Maven and MYSQL.
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/nickgonzalez42/HighSpeedRail.git
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Open the project and refresh Maven dependencies.
+3. Run the SQL scripts, db-init.sql first and then generate-trains.sql as needed to populate the database with train data.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+- [ ] Add more selection validation at train selection
+- [ ] Add user creation and user generation
+- [ ] Clean up front end presentation
+- [ ] Implement dynamic pricing based on availability and time to departure
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -206,9 +176,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Nicholas Gonzalez - nickgonzalez42@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/nickgonzalez42/HighSpeedRail](https://github.com/nickgonzalez42/HighSpeedRail)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,16 +187,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Thanks to the US High Speed Rail Association for their advocacy and sample map that was used for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,18 +195,18 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/nickgonzalez42/HighSpeedRail.svg?style=for-the-badge
+[contributors-url]: https://github.com/nickgonzalez42/HighSpeedRail/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/nickgonzalez42/HighSpeedRail.svg?style=for-the-badge
+[forks-url]: https://github.com/nickgonzalez42/HighSpeedRail/network/members
+[stars-shield]: https://img.shields.io/github/stars/nickgonzalez42/HighSpeedRail.svg?style=for-the-badge
+[stars-url]: https://github.com/nickgonzalez42/HighSpeedRail/stargazers
+[issues-shield]: https://img.shields.io/github/issues/nickgonzalez42/HighSpeedRail.svg?style=for-the-badge
+[issues-url]: https://github.com/nickgonzalez42/HighSpeedRail/issues
+[license-shield]: https://img.shields.io/github/license/nickgonzalez42/HighSpeedRail.svg?style=for-the-badge
+[license-url]: https://github.com/nickgonzalez42/HighSpeedRail/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/nicholasjgonzalez/
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
