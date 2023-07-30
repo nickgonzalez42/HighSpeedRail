@@ -3,7 +3,9 @@ package com.nickgonzalez.HighSpeedRail.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Table(name = "ticket")
+import java.util.UUID;
+
+@Table(name = "tickets")
 @Entity
 @Getter
 @Setter
