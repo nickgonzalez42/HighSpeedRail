@@ -85,14 +85,15 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-  Starting this project, I had three interests I wanted to explore: Java + the Spring Boot environment, creating a commercial, customer-focused product, and my personal interest in advocating for alternative transportation in the U.S. to automotive reliance. The endpoint of those ideas is this project: a high speed rail ticketing platform. Users will be able to select a date as well as an origin and destination city from the station network and the site will provide a route of stations along the shortest geographic path and train times to select from. From there, users can pick their selection of trains and will be provided tickets with UIDs.
+Starting this project, I had three interests I wanted to explore: Java + the Spring Boot environment, creating a commercial, customer-focused product, and my personal interest in advocating for alternative transportation in the U.S. to automotive reliance. The endpoint of those ideas is this project: a high speed rail ticketing platform. Users will be able to select a date as well as an origin and destination city from the station network and the site will provide a route of stations along the shortest geographic path and train times to select from. From there, users can pick their selection of trains and will be provided tickets with UIDs.
 
-  The project's data is stored in a MySQL database created using the scripts in the sql-scripts folder at the root of the project. The schema is created with the below tables:
+The project's data is stored in a MySQL database created using the scripts in the sql-scripts folder at the root of the project. The schema is created with the below tables:
 * Stations: I manually created these from real world, pre-existing transit hubs. The most important attribute is the latitude and longitude coordinates which will be relevant to the pathfinding algo.
 * Routes: For each pathway between stations, there's an inbound and outbound route.
 * Trains: At database setup, a set amount of trains are generated with random dates/times, random seat availability, and random route parent IDs.
 * Tickets: Initially an empty table, this will be filled with user tickets as the app is used.
 
+Spring Boot, using Java 17, is the web framework I used to create the fullstack application; Maven was the dependency manager and the full list of dependencies can be found in the POM file. The key piece of code to look at is the pathfinding algorithm found in the 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
