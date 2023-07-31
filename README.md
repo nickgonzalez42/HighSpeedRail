@@ -82,7 +82,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img width="822" alt="image" src="https://github.com/nickgonzalez42/HighSpeedRail/assets/41881164/3d648cba-c757-481f-9590-86a6f0e99ae8">
+<img width="300" alt="image" src="https://github.com/nickgonzalez42/HighSpeedRail/assets/41881164/3d648cba-c757-481f-9590-86a6f0e99ae8">
 
 
 Starting this project, I had three interests I wanted to explore: Java + the Spring Boot environment, creating a commercial, customer-focused product, and my personal interest in advocating for alternative transportation in the U.S. to automotive reliance. The endpoint of those ideas is this project: a high speed rail ticketing platform. Users will be able to select a date as well as an origin and destination city from the station network and the site will provide a route of stations along the shortest geographic path and train times to select from. From there, users can pick their selection of trains and will be provided tickets with UIDs.
