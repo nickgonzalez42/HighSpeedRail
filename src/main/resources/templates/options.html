@@ -17,8 +17,8 @@
             <h1 th:text="${trainList.get(0).getRoute.getOrigin.getName + ' to ' + trainList.get(0).getRoute.getDestination.getName} ">ROUTE DESCRIPTION</h1>
             <div th:each="train : ${trainList}">
                 <input th:name="${train.getRoute.getOrigin.getName}" th:field="*{trainIds}" type="checkbox" th:value="${train.getId}" />
-                <b>Departure: </b><span th:text="${#dates.format(train.getDeparture, 'MM/dd/yy h:mm a')}">DEPARTURE</span>
-                <b>Arrival: </b><span th:text="${#dates.format(train.getArrival, 'MM/dd/yy h:mm a')}">ARRIVAL</span>
+                <b>Departure: </b><span th:text="${#dates.format(train.getDeparture, 'MM/dd/yy h:mm a') + ' ' + train.getRoute().getOrigin().getTz()}">DEPARTURE</span>
+                <b>Arrival: </b><span th:text="${#dates.format(train.getArrival, 'MM/dd/yy h:mm a') + ' ' + train.getRoute().getOrigin().getTz()}">ARRIVAL</span>
                 <br />
             </div>
         </div>

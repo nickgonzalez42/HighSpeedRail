@@ -16,31 +16,24 @@ public class Station {
     @Id
     @Column(name="id")
     private int id;
-
+    @Column(name="tz")
+    private String tz;
     @Column(name = "name")
     private String name;
-
     @Column(name = "code")
     private String code;
-
     @Column(name = "address")
     private String address;
-
     @Column(name = "city")
     private String city;
-
     @Column(name = "state")
     private String state;
-
     @Column(name = "zip")
     private String zip;
-
     @Column(name = "latitude")
     private Double latitude;
-
     @Column(name = "longitude")
     private Double longitude;
-
     @OneToMany(mappedBy = "origin")
     @JsonIgnore
     private List<Route> outbound;

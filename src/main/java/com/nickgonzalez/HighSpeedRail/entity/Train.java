@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -53,5 +54,34 @@ public class Train {
         double costPerMile = 0.3;
         this.ticketPrice = costPerMile * this.route.getDistance();
     }
-
+    public Date timeAdjustedArrival() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(arrival);
+        String timezone = route.getOrigin().getTz();
+        if (timezone == "EST") {
+            calendar.add(Calendar.HOUR_OF_DAY, 3);
+        }
+        else if (timezone == "CST") {
+            calendar.add(Calendar.HOUR_OF_DAY, 2);
+        }
+        else if (timezone == "MST") {
+            calendar.add(Calendar.HOUR_OF_DAY, 1);
+        }
+        return calendar.getTime();
+    }
+    public Date timeAdjustedDeparture() {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(departure);
+        String timezone = route.getOrigin().getTz();
+        if (timezone == "EST") {
+            calendar.add(Calendar.HOUR_OF_DAY, 3);
+        }
+        else if (timezone == "CST") {
+            calendar.add(Calendar.HOUR_OF_DAY, 2);
+        }
+        else if (timezone == "MST") {
+            calendar.add(Calendar.HOUR_OF_DAY, 1);
+        }
+        return calendar.getTime();
+    }
 }
