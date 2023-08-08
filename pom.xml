@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.nickgonzalez</groupId>
 	<artifactId>HighSpeedRail</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>HighSpeedRail</name>
 	<description>Full Stack Demo Fantasy High Speed Rail Ticketing Platform</description>
 	<properties>
