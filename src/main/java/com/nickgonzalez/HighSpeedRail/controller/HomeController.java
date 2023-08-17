@@ -6,15 +6,12 @@ import com.nickgonzalez.HighSpeedRail.entity.Ticket;
 import com.nickgonzalez.HighSpeedRail.entity.Train;
 import com.nickgonzalez.HighSpeedRail.pojo.TicketList;
 import com.nickgonzalez.HighSpeedRail.pojo.Trip;
-import com.nickgonzalez.HighSpeedRail.pojo.TripValidator;
 import com.nickgonzalez.HighSpeedRail.service.RouteService;
 import com.nickgonzalez.HighSpeedRail.service.StationService;
 import com.nickgonzalez.HighSpeedRail.service.TicketService;
 import com.nickgonzalez.HighSpeedRail.service.TrainService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -34,12 +31,10 @@ public class HomeController {
     private RouteService routeService;
     private StationService stationService;
     private TicketService ticketService;
-    private TripValidator tripValidator;
-    public HomeController(TrainService theTrainService, TicketService ticketService, RouteService theRouteService, StationService theStationService, TripValidator theTripValidator) {
+    public HomeController(TrainService theTrainService, TicketService ticketService, RouteService theRouteService, StationService theStationService) {
         this.routeService = theRouteService;
         this.trainService = theTrainService;
         this.stationService = theStationService;
-        this.tripValidator = theTripValidator;
         this.ticketService = ticketService;
     }
     @ModelAttribute(name = "stations")
@@ -88,11 +83,7 @@ public class HomeController {
         }
     }
     @PostMapping("/purchase")
-    public String purchase(@Valid Trip trip, BindingResult bindingResult, Errors errors, @ModelAttribute TicketList ticketList) {
-        tripValidator.validate(trip, bindingResult);
-        if (bindingResult.hasErrors()) {
-            return "error";
-        }
+    public String purchase(@Valid Trip trip, @ModelAttribute TicketList ticketList) {
         for (int id : trip.getTrainIds()) {
             Ticket tempTicket = new Ticket(trip.getCustomerName(), trainService.findTrainById(id));
             Ticket ticket = ticketService.save(tempTicket);
@@ -101,7 +92,6 @@ public class HomeController {
         }
         return "purchase";
     }
-    //TODO Add an about page
     @GetMapping("/about")
     public String about() {
         return "about";

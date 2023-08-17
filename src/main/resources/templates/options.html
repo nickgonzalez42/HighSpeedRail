@@ -10,8 +10,7 @@
 <div id="options-content">
     <img width="800px" th:src="@{/images/map.png}"/>
     <span class="validationError"
-          th:if="${#fields.hasErrors('trip')}"
-          th:errors="*{trip}">Ingredient Error</span>
+          th:if="${#fields.hasErrors('trip')}">Please fix the below errors:</span>
     <form th:action="@{/purchase}" method="POST" th:object="${trip}">
         <div th:each="trainList : ${trains}">
             <h1 th:text="${trainList.get(0).getRoute.getOrigin.getName + ' to ' + trainList.get(0).getRoute.getDestination.getName} ">ROUTE DESCRIPTION</h1>
